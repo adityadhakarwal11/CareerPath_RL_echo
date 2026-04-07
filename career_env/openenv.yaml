@@ -1,0 +1,22 @@
+﻿name: career-mobility-rl-env
+description: Real-world RL environment for upward career mobility under tier disadvantage and job-search constraints.
+version: 0.1.0
+entrypoint: career_env/env.py:CareerMobilityEnv
+observation_model: Observation
+action_model: Action
+reward_model: RewardBreakdown
+tasks:
+  - id: easy-survival-stability
+    difficulty: easy
+  - id: medium-targeted-progress
+    difficulty: medium
+  - id: hard-upward-mobility
+    difficulty: hard
+metadata:
+  domain: career-planning
+  simulator_type: career-mobility-workflow
+  time_horizon_days: 30
+  notes:
+    - Focuses on upward mobility through skill-building, networking, resume quality, and targeted job search.
+    - Baseline inference is deterministic and reproducible.
+
