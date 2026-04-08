@@ -75,7 +75,8 @@ def grade_task(task_id: str, obs: Observation) -> Dict[str, float]:
         )
         metrics.append(debt_component)
 
-    score = sum(metrics) / max(len(metrics), 1)
+    raw_score = sum(metrics) / max(len(metrics), 1)
+    score = min(max(raw_score, 0.001), 0.999)
 
     return {
         "score": round(score, 4),
