@@ -1,0 +1,17 @@
+[project]
+name = "career-mobility-openenv"
+version = "0.1.0"
+description = "Validator-facing OpenEnv career mobility environment and baseline inference runner."
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+  "fastapi>=0.115.0",
+  "openai>=1.0.0",
+  "pydantic>=2.0.0",
+  "streamlit>=1.32.0",
+  "uvicorn>=0.30.0",
+]
+
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
